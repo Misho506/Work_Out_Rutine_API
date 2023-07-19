@@ -7,7 +7,7 @@
     "build": "npx tsc",
     "start": "./doenv.sh -e dev; npm run build && node dist/app.js",
     "start:local": "./doenv.sh -e local; npm run build && node dist/app.js",
-    "start:qa": "./doenv.sh -e qa; nodemon dist/app.js",
+    "start:stage": "./doenv.sh -e stage; nodemon dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
   },

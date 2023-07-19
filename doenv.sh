@@ -16,7 +16,7 @@ case $ENVIRONMENT in
     cat ./app/config/environments/.env.prod > .env
     ;;
   stage)
-    cat ./app/config/environments/.env.staging > .env
+    cat ./app/config/environments/.env.stage > .env
     ;;
   local)
     cat ./app/config/environments/.env.local > .env
