@@ -1,0 +1,41 @@
+{
+  "name": "node_project",
+  "main": "dist/app.js",
+  "description": "Nodejs Template",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "./doenv.sh -e dev; npm run build && node dist/app.js",
+    "start:local": "./doenv.sh -e local; npm run build && node dist/app.js",
+    "start:qa": "./doenv.sh -e qa; nodemon dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@types/express": "^4.17.17",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard-with-typescript": "^36.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1"
+  }
+}
