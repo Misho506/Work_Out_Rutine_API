@@ -3,7 +3,7 @@ import config from './db.config';
 import { Sequelize, Dialect } from 'sequelize';
 
 // Connection parameters
-const sequelize = new Sequelize(
+const sequelizeConnection = new Sequelize(
   config.DB,
   config.USER,
   config.PASSWORD,
@@ -16,7 +16,7 @@ const sequelize = new Sequelize(
 
 const testDbConnection = async () => {
   try {
-    await sequelize.authenticate();
+    await sequelizeConnection.authenticate();
     console.log('Connection has been established successfully.');
   } catch (error) {
     console.error(
@@ -27,6 +27,6 @@ const testDbConnection = async () => {
 };
 
 export {
-  sequelize,
+  sequelizeConnection,
   testDbConnection,
 };

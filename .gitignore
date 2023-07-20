@@ -3,3 +3,5 @@ node_modules
 # This folder generate by running the command `npm run build`
 dist
 
+.env
+
